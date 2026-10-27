@@ -1,0 +1,466 @@
+/* ==========================================================================
+   DRAME FAMILIALE LOCATION — feuille de style principale
+   Palette : vert foncé / blanc / doré léger
+   ========================================================================== */
+
+:root{
+  --vert-950:#07211A;
+  --vert-900:#0B3D2E;
+  --vert-800:#0F4C3A;
+  --vert-700:#15624A;
+  --vert-100:#E7F0EA;
+  --or:#C9A227;
+  --or-clair:#E4C766;
+  --or-pale:#F6ECC9;
+  --blanc:#FFFFFF;
+  --creme:#FAF8F3;
+  --encre:#16241E;
+  --gris:#5B6B64;
+  --gris-clair:#9CA9A2;
+  --ligne:#E3E0D6;
+
+  --police-titre:"Fraunces", "Georgia", serif;
+  --police-texte:"Manrope", "Segoe UI", sans-serif;
+
+  --rayon:14px;
+  --rayon-lg:26px;
+  --ombre:0 20px 50px -20px rgba(7,33,26,.35);
+  --ombre-sm:0 8px 20px -10px rgba(7,33,26,.25);
+  --transition:all .35s cubic-bezier(.22,.9,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--police-texte);
+  color:var(--encre);
+  background:var(--creme);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:min(1180px,92%);margin-inline:auto}
+section{padding:clamp(60px,9vw,110px) 0}
+
+h1,h2,h3,h4{font-family:var(--police-titre);font-weight:600;line-height:1.08;color:var(--vert-950)}
+h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--or);font-weight:700;margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--or)}
+.lead{color:var(--gris);font-size:17px;max-width:640px}
+.entete-section{margin-bottom:46px}
+.entete-section.centre{text-align:center;margin-inline:auto}
+.entete-section.centre .lead{margin-inline:auto}
+
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 30px;border-radius:999px;font-weight:700;font-size:14.5px;
+  letter-spacing:.02em;transition:var(--transition);white-space:nowrap;
+}
+.btn-or{background:linear-gradient(135deg,var(--or-clair),var(--or));color:var(--vert-950);box-shadow:var(--ombre-sm)}
+.btn-or:hover{transform:translateY(-3px);box-shadow:0 16px 30px -12px rgba(201,162,39,.55)}
+.btn-contour{border:1.5px solid rgba(255,255,255,.55);color:var(--blanc)}
+.btn-contour:hover{background:rgba(255,255,255,.12);border-color:var(--blanc)}
+.btn-vert{background:var(--vert-900);color:var(--blanc)}
+.btn-vert:hover{background:var(--vert-950);transform:translateY(-3px)}
+.btn-ligne{border:1.5px solid var(--vert-900);color:var(--vert-900)}
+.btn-ligne:hover{background:var(--vert-900);color:var(--blanc)}
+.btn-bloc{width:100%}
+
+/* ---------- En-tête / Navigation ---------- */
+.entete{position:fixed;top:0;left:0;right:0;z-index:999;padding:22px 0;transition:var(--transition)}
+.entete .container{display:flex;align-items:center;justify-content:space-between}
+.entete.scroll{background:rgba(7,33,26,.92);backdrop-filter:blur(10px);padding:14px 0;box-shadow:0 10px 30px -18px rgba(0,0,0,.5)}
+.marque{display:flex;align-items:center;gap:12px}
+.marque .logo-mark{
+  width:46px;height:46px;border-radius:12px;
+  background:linear-gradient(145deg,var(--or-clair),var(--or));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--police-titre);font-weight:700;color:var(--vert-950);font-size:18px;flex:none;
+}
+.marque .texte-marque{display:flex;flex-direction:column;line-height:1.15}
+.marque .texte-marque strong{color:var(--blanc);font-family:var(--police-titre);font-size:17px;letter-spacing:.01em}
+.marque .texte-marque span{color:var(--or-clair);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+
+.nav-principale{display:flex;align-items:center;gap:40px}
+.nav-principale ul{display:flex;gap:34px}
+.nav-principale a{color:rgba(255,255,255,.82);font-size:14.5px;font-weight:600;position:relative;padding:6px 0;transition:var(--transition)}
+.nav-principale a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--or);transition:var(--transition)}
+.nav-principale a:hover,.nav-principale a.actif{color:var(--blanc)}
+.nav-principale a:hover::after,.nav-principale a.actif::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:16px}
+.nav-tel{display:flex;align-items:center;gap:8px;color:var(--blanc);font-weight:700;font-size:14px}
+.nav-tel svg{width:17px;height:17px;fill:var(--or)}
+
+.menu-burger{display:none;flex-direction:column;gap:5px;width:30px;padding:8px}
+.menu-burger span{height:2px;background:var(--blanc);border-radius:2px}
+
+/* ---------- Héros ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--blanc);overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(7,33,26,.55) 0%,rgba(7,33,26,.35) 38%,rgba(7,20,16,.92) 100%);
+}
+.hero-contenu{position:relative;z-index:1;padding-bottom:100px;width:100%}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;padding:9px 18px;
+  border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px;color:var(--or-clair);
+  background:rgba(7,33,26,.3);
+}
+.hero h1{font-size:clamp(40px,7vw,78px);color:var(--blanc);max-width:16ch;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:var(--or-clair)}
+.hero p.hero-sous{margin-top:22px;font-size:clamp(16px,2vw,19px);max-width:46ch;color:rgba(255,255,255,.85)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.hero-stats{display:flex;gap:0;margin-top:70px;border-top:1px solid rgba(255,255,255,.2);padding-top:30px;max-width:720px}
+.hero-stats div{flex:1;padding-right:24px}
+.hero-stats b{display:block;font-family:var(--police-titre);font-size:clamp(22px,3vw,32px);color:var(--or-clair)}
+.hero-stats span{font-size:12.5px;color:rgba(255,255,255,.7);letter-spacing:.04em}
+
+/* ---------- Fil des étages (élément signature) ---------- */
+.fil-etages{background:var(--vert-950);color:var(--blanc);padding:26px 0}
+.fil-etages .container{display:flex;align-items:center;gap:0;overflow-x:auto}
+.etage{flex:1;min-width:120px;text-align:center;padding:14px 10px;position:relative;border-right:1px solid rgba(255,255,255,.12)}
+.etage:last-child{border-right:none}
+.etage .num{font-family:var(--police-titre);color:var(--or-clair);font-size:20px;display:block;margin-bottom:4px}
+.etage .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+
+/* ---------- Bandeau fil d'ariane (pages internes) ---------- */
+.bandeau-page{position:relative;padding:clamp(140px,20vw,190px) 0 70px;color:var(--blanc);overflow:hidden}
+.bandeau-page .hero-media{position:absolute;inset:0}
+.bandeau-page .container{position:relative;z-index:1}
+.bandeau-page h1{font-size:clamp(34px,5vw,54px);color:var(--blanc)}
+.fil-ariane{display:flex;gap:8px;align-items:center;margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.75)}
+.fil-ariane span{color:var(--or-clair)}
+
+/* ---------- Cartes / grilles génériques ---------- */
+.grille-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grille-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+
+/* À propos */
+.apropos-bloc{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.apropos-media{position:relative}
+.apropos-media img{border-radius:var(--rayon-lg);box-shadow:var(--ombre)}
+.apropos-media .carte-flottante{
+  position:absolute;bottom:-28px;left:-28px;background:var(--blanc);
+  padding:22px 26px;border-radius:var(--rayon);box-shadow:var(--ombre-sm);
+  display:flex;align-items:center;gap:16px;max-width:260px;
+}
+.apropos-media .carte-flottante .chiffre{font-family:var(--police-titre);font-size:30px;color:var(--vert-900)}
+.apropos-media .carte-flottante p{font-size:12.5px;color:var(--gris);line-height:1.35}
+.apropos-texte p{color:var(--gris);margin-bottom:18px;font-size:15.5px}
+.liste-points{margin-top:28px;display:grid;gap:14px}
+.liste-points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--encre)}
+.liste-points li svg{width:20px;height:20px;flex:none;fill:var(--or);margin-top:2px}
+
+/* Services / équipements */
+.carte-service{background:var(--blanc);border:1px solid var(--ligne);border-radius:var(--rayon-lg);padding:34px 28px;transition:var(--transition)}
+.carte-service:hover{transform:translateY(-6px);box-shadow:var(--ombre);border-color:transparent}
+.carte-service .icone{width:54px;height:54px;border-radius:14px;background:var(--vert-100);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.carte-service .icone svg{width:26px;height:26px;fill:var(--vert-900)}
+.carte-service h3{font-size:19px;margin-bottom:10px}
+.carte-service p{color:var(--gris);font-size:14.5px}
+
+/* Appartements */
+.carte-appart{background:var(--blanc);border-radius:var(--rayon-lg);overflow:hidden;box-shadow:var(--ombre-sm);transition:var(--transition);border:1px solid var(--ligne)}
+.carte-appart:hover{transform:translateY(-8px);box-shadow:var(--ombre)}
+.carte-appart .photo{position:relative;aspect-ratio:4/3;overflow:hidden}
+.carte-appart .photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.carte-appart:hover .photo img{transform:scale(1.08)}
+.badge-dispo{
+  position:absolute;top:16px;left:16px;background:var(--vert-900);color:var(--blanc);
+  padding:7px 14px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.04em;
+  display:flex;align-items:center;gap:6px;
+}
+.badge-dispo::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--or-clair)}
+.carte-appart .prix-tag{
+  position:absolute;bottom:16px;right:16px;background:rgba(7,33,26,.88);color:var(--blanc);
+  padding:9px 16px;border-radius:12px;font-family:var(--police-titre);font-size:16px;backdrop-filter:blur(4px);
+}
+.carte-appart .prix-tag small{display:block;font-family:var(--police-texte);font-size:10px;font-weight:600;color:var(--or-clair);letter-spacing:.06em}
+.carte-appart .contenu{padding:26px}
+.carte-appart h3{font-size:20px;margin-bottom:8px}
+.carte-appart .desc{color:var(--gris);font-size:14px;margin-bottom:18px}
+.caracs{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:22px;padding-top:18px;border-top:1px solid var(--ligne)}
+.caracs span{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--gris);font-weight:600}
+.caracs svg{width:16px;height:16px;fill:var(--or)}
+
+/* Galerie */
+.galerie-grille{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.galerie-item{position:relative;border-radius:var(--rayon);overflow:hidden;cursor:zoom-in}
+.galerie-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.galerie-item:hover img{transform:scale(1.1)}
+.galerie-item .legende{
+  position:absolute;inset:auto 0 0 0;padding:16px;
+  background:linear-gradient(0deg,rgba(7,33,26,.85),transparent);
+  color:var(--blanc);font-size:13px;font-weight:700;opacity:0;transform:translateY(8px);transition:var(--transition);
+}
+.galerie-item:hover .legende{opacity:1;transform:translateY(0)}
+.galerie-grille .g-large{grid-column:span 2;grid-row:span 2}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;background:rgba(7,15,12,.94);z-index:1200;
+  display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
+  transition:opacity .3s ease;padding:30px;
+}
+.lightbox.actif{opacity:1;pointer-events:auto}
+.lightbox img{max-width:min(1100px,92vw);max-height:84vh;border-radius:10px;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.lightbox-fermer{
+  position:absolute;top:26px;right:30px;width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.12);color:var(--blanc);font-size:22px;display:flex;
+  align-items:center;justify-content:center;transition:var(--transition);
+}
+.lightbox-fermer:hover{background:var(--or);color:var(--vert-950)}
+.lightbox-legende{position:absolute;bottom:34px;left:0;right:0;text-align:center;color:rgba(255,255,255,.8);font-size:14px}
+
+/* Témoignages */
+.bloc-temoignages{background:var(--vert-950);color:var(--blanc);position:relative;overflow:hidden}
+.bloc-temoignages::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(201,162,39,.12),transparent 45%)}
+.bloc-temoignages .entete-section h2{color:var(--blanc)}
+.bloc-temoignages .eyebrow{color:var(--or-clair)}
+.carte-avis{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rayon-lg);padding:32px;backdrop-filter:blur(2px)}
+.etoiles{color:var(--or-clair);font-size:16px;letter-spacing:3px;margin-bottom:18px}
+.carte-avis p.citation{font-size:16px;color:rgba(255,255,255,.9);margin-bottom:22px;font-family:var(--police-titre);font-weight:500;line-height:1.5}
+.auteur-avis{display:flex;align-items:center;gap:12px}
+.auteur-avis .initiale{
+  width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,var(--or-clair),var(--or));
+  display:flex;align-items:center;justify-content:center;color:var(--vert-950);font-weight:800;font-family:var(--police-titre);
+}
+.auteur-avis strong{font-size:14.5px;display:block}
+.auteur-avis span{font-size:12.5px;color:rgba(255,255,255,.6)}
+
+/* CTA bandeau */
+.cta-bandeau{
+  background:linear-gradient(120deg,var(--vert-900),var(--vert-950));
+  border-radius:var(--rayon-lg);padding:clamp(40px,6vw,70px);color:var(--blanc);
+  display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.cta-bandeau::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.25),transparent 70%)}
+.cta-bandeau h2{color:var(--blanc);font-size:clamp(24px,3.4vw,34px);max-width:14ch}
+.cta-bandeau .actions{display:flex;gap:16px;flex-wrap:wrap;position:relative;z-index:1}
+
+/* Formulaire contact */
+.grille-contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.infos-contact{display:flex;flex-direction:column;gap:22px}
+.ligne-info{display:flex;gap:16px;align-items:flex-start;padding:22px;background:var(--blanc);border:1px solid var(--ligne);border-radius:var(--rayon)}
+.ligne-info .icone{width:46px;height:46px;border-radius:12px;background:var(--vert-900);flex:none;display:flex;align-items:center;justify-content:center}
+.ligne-info .icone svg{width:21px;height:21px;fill:var(--or-clair)}
+.ligne-info strong{display:block;font-size:14px;margin-bottom:4px}
+.ligne-info span,.ligne-info a{color:var(--gris);font-size:14px}
+.ligne-info a:hover{color:var(--vert-900)}
+
+.carte-formulaire{background:var(--blanc);border-radius:var(--rayon-lg);padding:clamp(28px,4vw,44px);box-shadow:var(--ombre);border:1px solid var(--ligne)}
+.champ{margin-bottom:20px}
+.champ label{display:block;font-size:13px;font-weight:700;margin-bottom:8px;color:var(--vert-950)}
+.champ input,.champ textarea{
+  width:100%;padding:14px 16px;border:1.5px solid var(--ligne);border-radius:10px;
+  font-family:inherit;font-size:14.5px;transition:var(--transition);background:var(--creme);
+}
+.champ input:focus,.champ textarea:focus{outline:none;border-color:var(--or);background:var(--blanc)}
+.champ-double{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.msg-envoi{margin-top:16px;padding:14px 18px;border-radius:10px;font-size:14px;font-weight:600;display:none}
+.msg-envoi.ok{display:block;background:var(--vert-100);color:var(--vert-900)}
+
+.carte-carte{border-radius:var(--rayon-lg);overflow:hidden;box-shadow:var(--ombre-sm);border:1px solid var(--ligne);margin-top:26px}
+.carte-carte iframe{width:100%;height:320px;border:0;display:block}
+
+/* ---------- Pied de page ---------- */
+.pied{background:var(--vert-950);color:rgba(255,255,255,.75);padding-top:70px}
+.pied-grille{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:50px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.1)}
+.pied h4{color:var(--blanc);font-size:15px;margin-bottom:20px;font-family:var(--police-texte);letter-spacing:.03em}
+.pied-marque .marque{margin-bottom:18px}
+.pied-marque p{font-size:14px;line-height:1.7;max-width:34ch}
+.pied ul{display:flex;flex-direction:column;gap:12px}
+.pied a{font-size:14px;transition:var(--transition)}
+.pied a:hover{color:var(--or-clair)}
+.reseaux{display:flex;gap:12px;margin-top:22px}
+.reseaux a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.reseaux a:hover{background:var(--or);border-color:var(--or)}
+.reseaux svg{width:17px;height:17px;fill:var(--blanc)}
+.reseaux a:hover svg{fill:var(--vert-950)}
+.bas-pied{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:26px 0;font-size:12.5px;color:rgba(255,255,255,.5)}
+
+/* ---------- WhatsApp flottant ---------- */
+.whatsapp-flottant{position:fixed;right:24px;bottom:24px;z-index:900;display:flex;align-items:center;gap:12px}
+.whatsapp-bulle{
+  background:var(--vert-950);color:var(--blanc);padding:10px 16px;border-radius:999px;
+  font-size:13px;font-weight:700;box-shadow:var(--ombre-sm);opacity:0;transform:translateX(10px);
+  transition:var(--transition);white-space:nowrap;
+}
+.whatsapp-flottant:hover .whatsapp-bulle{opacity:1;transform:translateX(0)}
+.whatsapp-bouton{
+  width:62px;height:62px;border-radius:50%;background:#25D366;display:flex;align-items:center;
+  justify-content:center;box-shadow:0 14px 30px -10px rgba(37,211,102,.6);flex:none;
+  animation:pulse-wa 2.6s infinite;
+}
+.whatsapp-bouton svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse-wa{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}
+  70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* ---------- Utilitaires d'animation (révélation au scroll) ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delai-1{transition-delay:.08s}
+.reveal-delai-2{transition-delay:.16s}
+.reveal-delai-3{transition-delay:.24s}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .apropos-bloc{grid-template-columns:1fr;gap:50px}
+  .apropos-media .carte-flottante{position:static;margin-top:20px;max-width:100%}
+  .grille-contact{grid-template-columns:1fr}
+  .galerie-grille{grid-template-columns:repeat(3,1fr)}
+  .pied-grille{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media (max-width:860px){
+  .nav-principale ul,.nav-tel{display:none}
+  .menu-burger{display:flex}
+  .nav-principale{
+    position:fixed;top:0;right:0;height:100vh;width:min(320px,82%);
+    background:var(--vert-950);flex-direction:column;align-items:flex-start;padding:100px 32px 40px;
+    transform:translateX(100%);transition:var(--transition);gap:0;box-shadow:-20px 0 50px rgba(0,0,0,.3);
+  }
+  .nav-principale.ouvert{transform:translateX(0)}
+  .nav-principale ul.ouvert{display:flex;flex-direction:column;gap:22px;margin-bottom:34px}
+  .nav-tel.ouvert{display:flex}
+  .grille-3{grid-template-columns:1fr 1fr}
+  .galerie-grille{grid-template-columns:repeat(2,1fr)}
+  .galerie-grille .g-large{grid-column:span 2;grid-row:span 1}
+  .hero-stats{flex-wrap:wrap}
+  .hero-stats div{flex:1 1 40%}
+}
+@media (max-width:620px){
+  .grille-3,.grille-2{grid-template-columns:1fr}
+  .galerie-grille{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .champ-double{grid-template-columns:1fr}
+  .cta-bandeau{flex-direction:column;text-align:center;justify-content:center}
+  .pied-grille{grid-template-columns:1fr}
+  .bas-pied{flex-direction:column;text-align:center}
+  .hero-contenu{padding-bottom:60px}
+  .whatsapp-bulle{display:none}
+}
+
+/* ---------- Bannière « Nos appartements » (page spécifique) ---------- */
+.bandeau-appart{display:flex;align-items:flex-end;min-height:clamp(400px,44vw,580px);padding-bottom:clamp(40px,5vw,64px)}
+.bandeau-appart .hero-media img{width:100%;height:100%;object-fit:cover;object-position:30% 36%}
+.bandeau-appart .hero-media::after{background:linear-gradient(90deg,rgba(7,33,26,.6) 0%,rgba(7,33,26,.28) 38%,rgba(7,33,26,0) 70%),linear-gradient(0deg,rgba(7,33,26,.5) 0%,rgba(7,33,26,0) 40%)}
+@media(max-width:900px){.bandeau-appart .hero-media img{object-position:26% 40%}}
+@media(max-width:600px){
+  .bandeau-appart{min-height:440px}
+  .bandeau-appart .hero-media img{object-position:24% 42%}
+  .bandeau-appart .hero-media::after{background:linear-gradient(0deg,rgba(7,33,26,.85) 0%,rgba(7,33,26,.35) 45%,rgba(7,33,26,.1) 100%)}
+}
+
+/* ---------- Nouveau logo ---------- */
+.marque .logo-img{width:44px;height:44px;flex:none;display:block;border-radius:12px}
+@media(max-width:600px){.marque .logo-img{width:40px;height:40px}}
+
+/* =====================================================================
+   AMÉLIORATIONS : barre haute, en-tête, menu mobile, pied de page, accessibilité
+   ===================================================================== */
+
+/* ---------- Accessibilité ---------- */
+.lien-evitement{position:fixed;left:12px;top:-60px;z-index:2000;background:var(--or);color:var(--vert-950);padding:10px 16px;border-radius:10px;font-weight:700;transition:top .2s}
+.lien-evitement:focus{top:12px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--or-clair);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+
+/* ---------- Barre supérieure ---------- */
+.entete,.entete.scroll{padding:0}
+.barre-haut{background:var(--vert-950);border-bottom:1px solid rgba(255,255,255,.08);font-size:12.5px;max-height:44px;overflow:hidden;transition:max-height .3s ease,opacity .3s ease}
+.barre-haut .container{padding-block:8px;gap:16px}
+.barre-infos{display:flex;align-items:center;gap:22px}
+.barre-lien,.barre-horaires{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.88);font-weight:600}
+.barre-lien:hover{color:var(--or-clair)}
+.barre-haut svg{width:14px;height:14px;fill:var(--or-clair);flex:none}
+.barre-wa svg{fill:#25D366}
+.entete.scroll .barre-haut{max-height:0;opacity:0;border-bottom-width:0}
+.entete-corps{padding-block:18px;transition:padding .3s ease}
+.entete.scroll .entete-corps{padding-block:11px}
+.entete{background:linear-gradient(180deg,rgba(7,33,26,.78),rgba(7,33,26,0))}
+.entete.scroll{background:rgba(7,33,26,.94);backdrop-filter:blur(10px)}
+
+/* ---------- Bouton « Réserver une visite » ---------- */
+.btn-visite{padding:11px 20px;font-size:13.5px;white-space:nowrap}
+.btn-wa{background:#25D366;color:#06210f}
+.btn-wa:hover{background:#1ebe5a;transform:translateY(-3px)}
+.nav-actions-mobile{display:none}
+.nav-actions-mobile .btn svg{width:18px;height:18px;fill:currentColor;margin-right:8px}
+@media (max-width:1180px) and (min-width:861px){.nav-tel{display:none}.nav-principale{gap:26px}.nav-principale ul{gap:22px}}
+
+/* ---------- Menu mobile plein écran ---------- */
+.menu-burger{position:relative;z-index:1100;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.menu-burger span{width:24px;transition:transform .3s ease,opacity .2s ease}
+.menu-burger.actif span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-burger.actif span:nth-child(2){opacity:0}
+.menu-burger.actif span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:860px){
+  .barre-horaires{display:none}
+  .barre-haut{font-size:12px}
+  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background:linear-gradient(160deg,var(--vert-950),var(--vert-900))}
+  .nav-principale.ouvert{transform:translateY(0);opacity:1;visibility:visible}
+  .nav-principale ul.ouvert{align-items:center;gap:6px;margin-bottom:28px}
+  .nav-principale ul.ouvert a{font-family:var(--police-titre);font-size:26px;padding:10px 0;color:var(--blanc)}
+  .nav-principale .btn-visite{display:none}
+  .nav-principale.ouvert .btn-visite{display:inline-flex;font-size:15px;padding:14px 28px}
+  .nav-principale.ouvert .nav-actions-mobile{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px;margin-top:18px}
+  .nav-actions-mobile .btn{width:100%;min-height:52px;justify-content:center}
+  .nav-tel.ouvert{display:none}
+  body.menu-ouvert{overflow:hidden}
+}
+
+/* ---------- Pied de page ---------- */
+.bas-pied{justify-content:space-between;gap:14px 28px}
+.liens-legaux{display:flex;flex-wrap:wrap;gap:8px 22px}
+.liens-legaux a,.retour-haut-pied{font-size:12.5px;color:rgba(255,255,255,.72);min-height:24px}
+.liens-legaux a:hover,.retour-haut-pied:hover{color:var(--or-clair)}
+.retour-haut-pied{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.25);padding:8px 14px;border-radius:999px;font-weight:600}
+@media (max-width:600px){.liens-legaux{justify-content:center}.retour-haut-pied{min-height:44px}}
+
+/* ---------- Conditions de location ---------- */
+.grille-4{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.note-conditions{text-align:center;margin-top:30px;color:var(--gris);font-size:15px}
+.note-conditions a{color:var(--vert-900);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1000px){.grille-4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grille-4{grid-template-columns:1fr}}
+
+/* ---------- Pages légales ---------- */
+.bandeau-uni{background:linear-gradient(135deg,var(--vert-900),var(--vert-950))}
+.contenu-legal{max-width:820px;margin-inline:auto;background:var(--blanc);border:1px solid var(--ligne);border-radius:var(--rayon-lg);padding:clamp(26px,5vw,56px)}
+.contenu-legal h2{font-size:clamp(21px,2.6vw,26px);margin:34px 0 12px;color:var(--vert-900)}
+.contenu-legal h2:first-of-type{margin-top:0}
+.contenu-legal p,.contenu-legal li{color:var(--gris);font-size:16px;line-height:1.75}
+.contenu-legal p{margin-bottom:12px}
+.contenu-legal ul{list-style:disc;padding-left:22px;margin-bottom:14px;display:block}
+.contenu-legal li{margin-bottom:6px}
+.contenu-legal a{color:var(--vert-900);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.contenu-legal .maj{font-size:13.5px;color:var(--gris-clair)}
+.contenu-legal .encadre{background:var(--or-pale);border-left:4px solid var(--or);padding:14px 18px;border-radius:10px;margin:18px 0;color:var(--encre)}
+.a-completer{background:var(--or-pale);color:var(--encre);padding:1px 8px;border-radius:6px;font-weight:700;font-size:.92em}
+
+.btn-visite{padding:12px 24px}
+
+/* Évite que le bouton WhatsApp flottant masque le bas du pied de page */
+@media (min-width:601px){.retour-haut-pied{margin-right:76px}}
+@media (max-width:600px){.bas-pied{padding-bottom:96px}}
+
+/* Boutons dans le menu : lisibilité (priorité sur .nav-principale a) */
+.nav-principale a.btn::after{display:none}
+.nav-principale a.btn-visite{color:var(--vert-950);padding:12px 24px}
+.nav-principale a.btn-wa{color:#06210f;padding:12px 24px}
+.nav-principale a.btn-contour{color:var(--blanc);padding:12px 24px}

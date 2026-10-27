@@ -1,0 +1,3 @@
+Les icônes du site sont des SVG professionnels intégrés directement dans le code HTML/CSS
+(aucune dépendance externe, chargement instantané). Ce dossier est conservé pour accueillir
+d'éventuelles icônes supplémentaires si besoin futur.
