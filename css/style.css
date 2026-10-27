@@ -111,17 +111,17 @@ h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(7,33,26,.55) 0%,rgba(7,33,26,.35) 38%,rgba(7,20,16,.92) 100%);
 }
-.hero-contenu{position:relative;z-index:1;padding-bottom:100px;width:100%}
+.hero-contenu{position:relative;z-index:1;padding-bottom:100px;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:900px;margin:0 auto;padding-inline:20px}
 .hero-badge{
-  display:inline-flex;align-items:center;gap:10px;padding:9px 18px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:9px 18px;
   border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:12.5px;
-  letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px;color:var(--or-clair);
+  letter-spacing:.14em;text-transform:uppercase;margin:0 auto 26px;color:var(--or-clair);
   background:rgba(7,33,26,.3);
 }
-.hero h1{font-size:clamp(40px,7vw,78px);color:var(--blanc);max-width:16ch;letter-spacing:-.015em}
+.hero h1{font-size:clamp(40px,7vw,78px);color:var(--blanc);max-width:16ch;letter-spacing:-.015em;text-align:center}
 .hero h1 em{font-style:normal;color:var(--or-clair)}
-.hero p.hero-sous{margin-top:22px;font-size:clamp(16px,2vw,19px);max-width:46ch;color:rgba(255,255,255,.85)}
-.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.hero p.hero-sous{margin-top:22px;font-size:clamp(16px,2vw,19px);max-width:46ch;color:rgba(255,255,255,.85);margin-inline:auto;text-align:center}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;margin-top:38px}
 .hero-stats{display:flex;gap:0;margin-top:70px;border-top:1px solid rgba(255,255,255,.2);padding-top:30px;max-width:720px}
 .hero-stats div{flex:1;padding-right:24px}
 .hero-stats b{display:block;font-family:var(--police-titre);font-size:clamp(22px,3vw,32px);color:var(--or-clair)}
@@ -378,16 +378,16 @@ h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
 .lien-evitement{position:fixed;left:12px;top:-60px;z-index:2000;background:var(--or);color:var(--vert-950);padding:10px 16px;border-radius:10px;font-weight:700;transition:top .2s}
 .lien-evitement:focus{top:12px}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--or-clair);outline-offset:3px;border-radius:6px}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto!important}}
 
 /* ---------- Barre supérieure ---------- */
 .entete,.entete.scroll{padding:0}
-.barre-haut{background:var(--vert-950);border-bottom:1px solid rgba(255,255,255,.08);font-size:12.5px;max-height:44px;overflow:hidden;transition:max-height .3s ease,opacity .3s ease}
-.barre-haut .container{padding-block:8px;gap:16px}
-.barre-infos{display:flex;align-items:center;gap:22px}
-.barre-lien,.barre-horaires{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.88);font-weight:600}
+.barre-haut{background:var(--vert-950);border-bottom:1px solid rgba(255,255,255,.08);font-size:16px;max-height:82px;overflow:hidden;transition:max-height .3s ease,opacity .3s ease}
+.barre-haut .container{display:flex;align-items:center;justify-content:space-between;padding-block:18px;gap:16px}
+.barre-infos{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.barre-lien,.barre-horaires{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.88);font-weight:600;font-size:16px;line-height:1.2}
 .barre-lien:hover{color:var(--or-clair)}
-.barre-haut svg{width:14px;height:14px;fill:var(--or-clair);flex:none}
+.barre-haut svg{width:18px;height:18px;fill:var(--or-clair);flex:none}
 .barre-wa svg{fill:#25D366}
 .entete.scroll .barre-haut{max-height:0;opacity:0;border-bottom-width:0}
 .entete-corps{padding-block:18px;transition:padding .3s ease}
@@ -412,7 +412,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media (max-width:860px){
   .barre-horaires{display:none}
   .barre-haut{font-size:12px}
-  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background:linear-gradient(160deg,var(--vert-950),var(--vert-900))}
+  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background:var(--vert-950)}
   .nav-principale.ouvert{transform:translateY(0);opacity:1;visibility:visible}
   .nav-principale ul.ouvert{align-items:center;gap:6px;margin-bottom:28px}
   .nav-principale ul.ouvert a{font-family:var(--police-titre);font-size:26px;padding:10px 0;color:var(--blanc)}
