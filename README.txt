@@ -22,7 +22,7 @@ DRAME-FAMILIALE-LOCATION/
 ├── images/                  Bannière de l'immeuble (JPG + WebP) et vos futures photos
 ├── logo/
 │   ├── favicon.svg          Favicon du site (icône d'onglet)
-│   ├── logo-icone.svg       Icône du logo (en-tête et pied de page)
+│   ├── logo-icone.png       Icône du logo (en-tête et pied de page)
 │   ├── logo.svg              Logo complet horizontal
 │   └── propositions/        Autres idées de logo (B et C)
 ├── icones/                  Dossier réservé pour icônes additionnelles
