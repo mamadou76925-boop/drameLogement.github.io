@@ -1,8 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EBD07F"/><stop offset="1" stop-color="#C39A3A"/></linearGradient></defs>
-<rect width="64" height="64" rx="14" fill="#0B3D2E"/>
-<path d="M14 54V24l18-10 18 10v30z" fill="none" stroke="url(#g)" stroke-width="2.5" stroke-linejoin="round"/>
-<g fill="url(#g)"><rect x="20" y="26" width="6" height="5" rx="1"/><rect x="29" y="26" width="6" height="5" rx="1"/><rect x="38" y="26" width="6" height="5" rx="1"/>
-<rect x="20" y="34" width="6" height="5" rx="1"/><rect x="29" y="34" width="6" height="5" rx="1"/><rect x="38" y="34" width="6" height="5" rx="1"/>
-<rect x="20" y="42" width="6" height="5" rx="1"/><rect x="38" y="42" width="6" height="5" rx="1"/></g>
-<rect x="29" y="42" width="6" height="12" rx="1" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">DRAME LOGEMENT favicon</title>
+  <desc id="desc">Icône circulaire d'une maison avec mobilier et décoration.</desc>
+  <rect width="128" height="128" fill="#f4efe9"/>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="#3b2a1f" stroke-width="3"/>
+  <g stroke="#3b2a1f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M28 52 L64 25 L100 52"/>
+    <path d="M34 52 V86 H94 V52"/>
+    <path d="M40 86 V58 H88 V86"/>
+  </g>
+  <path d="M34 84C34 72 43 65 53 65H74C84 65 93 72 93 84V94H34V84Z" fill="#f0e3d0" stroke="#3b2a1f" stroke-width="2.5"/>
+  <path d="M42 74C50 68 57 66 64 66C71 66 78 68 86 74V90H42V74Z" fill="#e1c7a0" stroke="#3b2a1f" stroke-width="2.5"/>
+  <path d="M33 53C39 44 49 40 64 40C79 40 89 44 95 53" stroke="#3b2a1f" stroke-width="2.5"/>
+  <path d="M55 46C58 42 61 40 64 40C67 40 70 42 73 46" stroke="#3b2a1f" stroke-width="2.5"/>
+  <circle cx="60" cy="59" r="8" fill="#2d201a"/>
+  <circle cx="68" cy="59" r="8" fill="#2d201a"/>
+  <path d="M52 72C56 74 60 75 64 75C69 75 73 74 76 72" stroke="#d7b58a" stroke-width="2.2" fill="none"/>
+  <path d="M49 95C54 90 58 88 64 88C70 88 75 90 80 95" stroke="#3b2a1f" stroke-width="2.5" fill="none"/>
 </svg>
