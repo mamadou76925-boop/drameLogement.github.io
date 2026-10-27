@@ -627,3 +627,237 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .btn-or,.btn-contour,.btn-vert,.btn-ligne{padding-block:12px}
   .whatsapp-flottant{right:18px;bottom:18px}
 }
+
+/* --------------------------------------------
+   COMPACTAGE MOBILE PLUS AGRESSIF
+   Ajouter à la fin de css/style.css
+   -------------------------------------------- */
+
+@media (max-width: 860px){
+  body{overflow-x:hidden}
+  section{padding:26px 0 !important}
+  .entete{padding:0 !important}
+  .barre-haut{display:none !important}
+  .entete-corps{padding-block:12px !important}
+  .hero{min-height:72svh !important}
+  .hero-contenu{
+    padding-top:92px !important;
+    padding-bottom:28px !important;
+  }
+  .hero-badge{
+    margin-bottom:12px !important;
+    padding:7px 12px !important;
+    font-size:10.5px !important;
+    letter-spacing:.1em !important;
+  }
+  .hero h1{
+    font-size:clamp(30px,8vw,48px) !important;
+    max-width:12ch !important;
+  }
+  .hero p.hero-sous{
+    margin-top:14px !important;
+    font-size:14.5px !important;
+    line-height:1.5 !important;
+  }
+  .hero-actions{
+    gap:10px !important;
+    margin-top:18px !important;
+  }
+  .hero-stats{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+    margin-top:22px !important;
+    padding-top:18px !important;
+    max-width:100% !important;
+  }
+  .hero-stats div{padding-right:0 !important}
+  .hero-stats b{font-size:clamp(20px,5vw,28px) !important}
+  .hero-stats span{
+    font-size:10.5px !important;
+    line-height:1.35 !important;
+  }
+
+  .fil-etages{padding:8px 0 !important}
+  .fil-etages .container{
+    gap:8px !important;
+    overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .etage{
+    min-width:88px !important;
+    padding:10px 6px !important;
+  }
+  .etage .num{font-size:18px !important}
+  .etage .lbl{
+    font-size:9px !important;
+    letter-spacing:.06em !important;
+  }
+
+  .grille-3,.grille-2,.grille-contact{gap:14px !important}
+  .carte-service{padding:18px 16px !important}
+  .carte-service h3{
+    font-size:18px !important;
+    margin-bottom:8px !important;
+  }
+  .carte-service p{font-size:13.5px !important}
+  .carte-appart .contenu{padding:16px !important}
+  .carte-appart h3{
+    font-size:18px !important;
+    margin-bottom:6px !important;
+  }
+  .carte-appart .desc{
+    font-size:13px !important;
+    margin-bottom:12px !important;
+  }
+
+  .galerie-grille{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    grid-auto-rows:110px !important;
+    gap:6px !important;
+  }
+  .galerie-grille .g-large{
+    grid-column:span 2 !important;
+    grid-row:span 1 !important;
+  }
+
+  .cta-bandeau{
+    padding:22px 18px !important;
+    gap:16px !important;
+    border-radius:18px !important;
+  }
+  .cta-bandeau h2{
+    font-size:clamp(22px,5vw,30px) !important;
+    max-width:11ch !important;
+  }
+  .cta-bandeau .actions{gap:10px !important}
+
+  .pied{padding-top:32px !important}
+  .pied-grille{
+    grid-template-columns:1fr 1fr !important;
+    gap:20px 18px !important;
+    padding-bottom:20px !important;
+  }
+  .pied h4{margin-bottom:10px !important}
+  .pied a,.pied li{font-size:13px !important}
+  .pied-marque p{font-size:13px !important}
+  .reseaux{margin-top:14px !important}
+  .bas-pied{
+    padding:16px 0 !important;
+    font-size:11.5px !important;
+  }
+
+  .apropos-bloc{gap:30px !important}
+  .apropos-texte p{font-size:14.5px !important}
+  .liste-points li{font-size:14px !important}
+  .carte-avis{padding:18px 16px !important}
+}
+
+@media (max-width: 620px){
+  section{padding:22px 0 !important}
+  .hero{min-height:68svh !important}
+  .hero-contenu{
+    padding-top:84px !important;
+    padding-bottom:22px !important;
+  }
+  .hero-badge{
+    margin-bottom:10px !important;
+    padding:7px 10px !important;
+    font-size:9.5px !important;
+    letter-spacing:.08em !important;
+  }
+  .hero h1{font-size:clamp(28px,9vw,42px) !important}
+  .hero p.hero-sous{
+    font-size:13.5px !important;
+    line-height:1.5 !important;
+  }
+  .hero-actions{
+    width:100% !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:9px !important;
+    margin-top:18px !important;
+  }
+  .hero-actions .btn{
+    width:100% !important;
+    margin-inline:auto !important;
+  }
+
+  .grille-3,.grille-2{
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+  .carte-service,.carte-avis,.carte-formulaire{padding:16px 14px !important}
+  .carte-appart .photo{aspect-ratio:4/3 !important}
+  .carte-appart .contenu{padding:14px !important}
+  .carte-appart h3{font-size:17px !important}
+  .carte-appart .desc{font-size:13px !important}
+
+  .galerie-grille{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:110px !important;
+    gap:6px !important;
+  }
+  .galerie-grille .g-large{
+    grid-column:span 1 !important;
+    grid-row:auto !important;
+  }
+
+  .cta-bandeau{
+    padding:20px 16px !important;
+    flex-direction:column !important;
+    text-align:center !important;
+  }
+  .cta-bandeau .actions{
+    width:100% !important;
+    flex-direction:column !important;
+  }
+  .cta-bandeau .actions .btn{width:100% !important}
+
+  .pied-grille{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+    padding-bottom:18px !important;
+  }
+  .bas-pied{
+    flex-direction:column !important;
+    text-align:center !important;
+    gap:8px !important;
+    font-size:11px !important;
+  }
+  .liens-legaux{
+    justify-content:center !important;
+    gap:8px 12px !important;
+  }
+  .retour-haut-pied{
+    width:100% !important;
+    justify-content:center !important;
+    min-height:44px !important;
+  }
+}
+
+@media (max-width: 430px){
+  .hero{min-height:64svh !important}
+  .hero h1{font-size:clamp(26px,8.8vw,36px) !important}
+  .hero p.hero-sous{font-size:12.8px !important}
+  .hero-stats{gap:8px !important}
+  .hero-stats b{font-size:18px !important}
+  .hero-stats span{font-size:10px !important}
+  .fil-etages .container{gap:6px !important}
+  .etage{min-width:82px !important}
+  .galerie-grille{grid-auto-rows:96px !important}
+  .btn{min-height:44px !important;padding:12px 18px !important}
+}
+
+@media (max-width: 390px){
+  .hero{min-height:60svh !important}
+  .hero h1{font-size:clamp(24px,8vw,32px) !important}
+  .hero-badge{
+    font-size:9px !important;
+    letter-spacing:.06em !important;
+  }
+  .hero-actions .btn{font-size:13px !important}
+  .pied-grille{gap:14px !important}
+  .galerie-grille{grid-auto-rows:88px !important}
+  .cta-bandeau h2{font-size:20px !important}
+}
