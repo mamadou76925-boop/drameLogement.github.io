@@ -14,6 +14,8 @@
 
   <circle cx="80" cy="80" r="72" fill="#f5f1ea" stroke="#3b2a1f" stroke-width="4"/>
 
+  <g transform="translate(80 80) scale(0.82) translate(-80 -80)">
+
   <g stroke="#3b2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M30 70 L80 33 L130 70"/>
     <path d="M40 70 V110 H120 V70"/>
@@ -51,5 +53,6 @@
     <path d="M64 120c7 0 15 5 15 15"/>
     <path d="M96 120c-7 0-15 5-15 15"/>
     <path d="M80 126v12"/>
+  </g>
   </g>
 </svg>
