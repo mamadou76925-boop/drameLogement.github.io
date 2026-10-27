@@ -1,7 +1,7 @@
 /* ==========================================================================
-   DRAME FAMILIALE LOCATION — feuille de style principale
-   Palette : vert foncé / blanc / doré léger
-   ========================================================================== */
+    DRAME FAMILIALE LOCATION — feuille de style principale
+    Palette : vert foncé / blanc / doré léger
+    ========================================================================== */
 
 :root{
   --vert-950:#07211A;
@@ -111,7 +111,7 @@ h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(7,33,26,.55) 0%,rgba(7,33,26,.35) 38%,rgba(7,20,16,.92) 100%);
 }
-.hero-contenu{position:relative;z-index:1;padding-bottom:100px;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:900px;margin:0 auto;padding-inline:20px}
+.hero-contenu{position:relative;z-index:1;padding-bottom:100px;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;max-width:900px;margin:0 auto}
 .hero-badge{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:9px 18px;
   border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:12.5px;
@@ -371,14 +371,14 @@ h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
 @media(max-width:600px){.marque .logo-img{width:40px;height:40px}}
 
 /* =====================================================================
-   AMÉLIORATIONS : barre haute, en-tête, menu mobile, pied de page, accessibilité
-   ===================================================================== */
+    AMÉLIORATIONS : barre haute, en-tête, menu mobile, pied de page, accessibilité
+    ===================================================================== */
 
 /* ---------- Accessibilité ---------- */
 .lien-evitement{position:fixed;left:12px;top:-60px;z-index:2000;background:var(--or);color:var(--vert-950);padding:10px 16px;border-radius:10px;font-weight:700;transition:top .2s}
 .lien-evitement:focus{top:12px}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--or-clair);outline-offset:3px;border-radius:6px}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
 
 /* ---------- Barre supérieure ---------- */
 .entete,.entete.scroll{padding:0}
@@ -412,7 +412,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media (max-width:860px){
   .barre-horaires{display:none}
   .barre-haut{font-size:12px}
-  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background:var(--vert-950)}
+  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background: rgba(7,33,26,.98)}
   .nav-principale.ouvert{transform:translateY(0);opacity:1;visibility:visible}
   .nav-principale ul.ouvert{align-items:center;gap:6px;margin-bottom:28px}
   .nav-principale ul.ouvert a{font-family:var(--police-titre);font-size:26px;padding:10px 0;color:var(--blanc)}
@@ -464,3 +464,166 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .nav-principale a.btn-visite{color:var(--vert-950);padding:12px 24px}
 .nav-principale a.btn-wa{color:#06210f;padding:12px 24px}
 .nav-principale a.btn-contour{color:var(--blanc);padding:12px 24px}
+
+/* ============================================================
+   CORRECTIONS MOBILE COMPACTES — à conserver pour mobile
+   ============================================================ */
+@media (max-width: 860px){
+  section{padding:40px 0}
+  .entete-section{margin-bottom:28px}
+  .eyebrow{margin-bottom:12px}
+  .lead{font-size:15px}
+  h2.titre-section{font-size:clamp(24px,6vw,34px)}
+  h1,h2,h3,h4{line-height:1.12}
+  .btn{padding:13px 22px;min-height:44px}
+  .hero{min-height:85svh}
+  .hero-contenu{padding-bottom:54px}
+  .hero-badge{margin-bottom:18px}
+  .hero h1{font-size:clamp(32px,10vw,54px)}
+  .hero p.hero-sous{margin-top:16px;font-size:15px}
+  .hero-actions{gap:12px;margin-top:24px}
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px 16px;max-width:560px;margin-top:36px;padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.2)
+  }
+  .hero-stats div{flex:none;padding-right:0}
+  .hero-stats b{font-size:clamp(20px,5vw,28px)}
+  .hero-stats span{font-size:11px;line-height:1.45}
+
+  .fil-etages{padding:12px 0}
+  .fil-etages .container{
+    gap:10px;overflow-x:auto;scrollbar-width:thin;
+    -webkit-overflow-scrolling:touch;scroll-snap-type:x proximity
+  }
+  .etage{
+    min-width:106px;padding:10px 8px;border-right:1px solid rgba(255,255,255,.12);
+    scroll-snap-align:start
+  }
+  .etage .num{font-size:18px}
+  .etage .lbl{font-size:9.5px;letter-spacing:.08em}
+
+  .grille-3,.grille-2{gap:18px}
+  .carte-service{padding:22px 18px}
+  .carte-service h3{font-size:18px;margin-bottom:8px}
+  .carte-service p{font-size:13.5px}
+  .carte-appart .photo{aspect-ratio:16/11}
+  .carte-appart .contenu{padding:18px 16px}
+  .carte-appart h3{font-size:18px;margin-bottom:6px}
+  .carte-appart .desc{margin-bottom:12px;font-size:13.5px}
+  .apropos-bloc{gap:38px}
+  .apropos-texte p{font-size:14.5px}
+  .liste-points li{font-size:14px}
+
+  .galerie-grille{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-auto-rows:110px;
+    gap:6px
+  }
+  .galerie-item{border-radius:10px}
+  .galerie-grille .g-large{
+    grid-column:span 2;
+    grid-row:span 1
+  }
+
+  .carte-avis{padding:22px 20px}
+  .cta-bandeau{
+    padding:28px 20px;
+    gap:18px;
+    border-radius:18px
+  }
+  .cta-bandeau h2{font-size:clamp(22px,5vw,30px)}
+  .pied{padding-top:46px}
+  .pied-grille{
+    grid-template-columns:1fr 1fr;
+    gap:24px 26px;
+    padding-bottom:28px
+  }
+  .pied h4{margin-bottom:12px}
+  .pied-marque p{font-size:13px}
+  .pied ul{gap:8px}
+  .pied a,.pied li{font-size:13px}
+  .reseaux{margin-top:16px}
+  .bas-pied{padding:18px 0;font-size:11.5px}
+}
+
+@media (max-width: 620px){
+  section{padding:36px 0}
+  .hero{min-height:84svh}
+  .hero-contenu{padding-bottom:42px}
+  .hero-badge{
+    margin-bottom:16px;padding:8px 14px;font-size:11px;letter-spacing:.08em
+  }
+  .hero h1{font-size:clamp(30px,11vw,44px)}
+  .hero p.hero-sous{font-size:14px}
+  .hero-actions{
+    width:100%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+    margin-top:22px
+  }
+  .hero-actions .btn{width:min(100%,260px);margin-inline:auto}
+  .hero-stats{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px
+  }
+  .hero-stats div{padding:0}
+  .hero-stats span{letter-spacing:.02em}
+
+  .fil-etages{padding:8px 0}
+  .fil-etages .container{gap:8px}
+  .etage{min-width:94px;padding:9px 6px}
+  .etage .lbl{letter-spacing:.06em}
+
+  .grille-3,.grille-2{grid-template-columns:1fr;gap:16px}
+  .carte-service{padding:20px 16px}
+  .carte-appart .photo{aspect-ratio:4/3}
+  .carte-appart .contenu{padding:16px}
+  .carte-avis{padding:18px 16px}
+
+  .galerie-grille{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-auto-rows:118px;
+    gap:6px
+  }
+  .galerie-item{border-radius:10px}
+  .galerie-grille .g-large{
+    grid-column:span 1;
+    grid-row:auto
+  }
+
+  .cta-bandeau{
+    padding:24px 18px;
+    text-align:center;
+    flex-direction:column
+  }
+  .cta-bandeau .actions{
+    width:100%;
+    flex-direction:column
+  }
+  .cta-bandeau .actions .btn{width:100%}
+
+  .pied{padding-top:36px}
+  .pied-grille{grid-template-columns:1fr;gap:22px;padding-bottom:20px}
+  .pied-marque p{font-size:12.5px}
+  .bas-pied{
+    flex-direction:column;
+    text-align:center;
+    gap:10px
+  }
+  .liens-legaux{justify-content:center}
+  .retour-haut-pied{
+    width:100%;
+    justify-content:center;
+    min-height:44px
+  }
+  .reseaux a{width:36px;height:36px}
+  .carte-flottante{padding:16px 18px}
+  .carte-flottante .chiffre{font-size:24px}
+  .liste-points li{align-items:flex-start}
+
+  .btn{min-height:44px}
+  .btn-or,.btn-contour,.btn-vert,.btn-ligne{padding-block:12px}
+  .whatsapp-flottant{right:18px;bottom:18px}
+}
