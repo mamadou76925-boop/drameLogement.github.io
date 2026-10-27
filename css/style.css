@@ -367,8 +367,34 @@ h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
 }
 
 /* ---------- Nouveau logo ---------- */
-.marque .logo-img{width:44px;height:44px;flex:none;display:block;border-radius:12px}
-@media(max-width:600px){.marque .logo-img{width:40px;height:40px}}
+.marque{display:flex;align-items:center;gap:12px;line-height:1;flex:0 0 auto}
+.marque .logo-img{
+  display:block;
+  width:52px;
+  height:52px;
+  min-width:52px;
+  min-height:52px;
+  flex:none;
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+  object-position:center;
+  border-radius:0;
+  background:transparent;
+  overflow:visible;
+}
+.marque .texte-marque{display:flex;flex-direction:column;justify-content:center;line-height:1.1}
+.pied-marque .marque .logo-img{width:52px;height:52px;min-width:52px;min-height:52px}
+@media(max-width:600px){
+  .marque{gap:12px}
+  .marque .logo-img{
+    width:44px;
+    height:44px;
+    min-width:44px;
+    min-height:44px;
+    border-radius:0;
+  }
+  .pied-marque .marque .logo-img{width:44px;height:44px;min-width:44px;min-height:44px}
+}
 
 /* =====================================================================
     AMÉLIORATIONS : barre haute, en-tête, menu mobile, pied de page, accessibilité
@@ -378,7 +404,7 @@ h2.titre-section{font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
 .lien-evitement{position:fixed;left:12px;top:-60px;z-index:2000;background:var(--or);color:var(--vert-950);padding:10px 16px;border-radius:10px;font-weight:700;transition:top .2s}
 .lien-evitement:focus{top:12px}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--or-clair);outline-offset:3px;border-radius:6px}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}[...]}
 
 /* ---------- Barre supérieure ---------- */
 .entete,.entete.scroll{padding:0}
@@ -412,7 +438,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media (max-width:860px){
   .barre-horaires{display:none}
   .barre-haut{font-size:12px}
-  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background: rgba(7,33,26,.98)}
+  .nav-principale{width:100%;box-shadow:none;align-items:center;justify-content:center;text-align:center;padding:90px 28px 40px;transform:translateY(-100%);opacity:0;visibility:hidden;background:var(--vert-950)}
   .nav-principale.ouvert{transform:translateY(0);opacity:1;visibility:visible}
   .nav-principale ul.ouvert{align-items:center;gap:6px;margin-bottom:28px}
   .nav-principale ul.ouvert a{font-family:var(--police-titre);font-size:26px;padding:10px 0;color:var(--blanc)}
